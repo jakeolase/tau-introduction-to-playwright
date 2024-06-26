@@ -6,6 +6,7 @@ import { test, expect } from '@playwright/test';
 // [Act]
 // [Assert]
 
+//-------------[Arrange Part]-----------------
 const password = process.env.PASSWORD;
 
 test.beforeAll(async ({ playwright }) => {
@@ -39,6 +40,8 @@ test.afterEach( async ({ page }, testInfo) => {
         console.log(`Did not run as expected, ended up at ${page.url()}`);
     // clean up all the data we created for this test through API calls
 });
+//----------[End of Arrange Part]---------------------
+
 
 // test.describe('Test Case', () => {
 // test.describe.only('Test Case', () => {
